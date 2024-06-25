@@ -62,9 +62,6 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
 
-            // coroutines
-            implementation(libs.kotlinx.coroutines.android)
-
             // koin
             implementation(libs.koin.androidx.compose)
         }
@@ -74,42 +71,18 @@ kotlin {
             implementation(compose.material)
             implementation(compose.materialIconsExtended)
             implementation(compose.ui)
+            implementation(compose.animation)
+            implementation(compose.animationGraphics)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-
-            // coroutines
-            implementation(project.dependencies.platform(libs.kotlinx.coroutines.bom))
-            implementation(libs.kotlinx.coroutines.core)
-
-            // json
-            implementation(libs.kotlinx.serialization.json)
 
             // precompose
             api(libs.precompose)
             api(libs.precompose.viewmodel)
             api(libs.precompose.koin)
-
-            // coil
-            implementation(libs.ktor.core)
-            implementation(libs.coil.compose.core)
-            implementation(libs.coil.compose)
-            implementation(libs.coil.mp)
-            implementation(libs.coil.network.ktor)
-
-//             koin
-//            implementation(libs.koin.compose)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
-
-            // coroutines
-            runtimeOnly(libs.kotlinx.coroutines.swing)
-            implementation(libs.kotlinx.coroutines.core.jvm)
-
-            implementation(libs.ktor.client.okhttp)
-        }
-        iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
         }
     }
 }
