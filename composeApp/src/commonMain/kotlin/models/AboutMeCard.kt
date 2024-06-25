@@ -1,6 +1,5 @@
 package models
 
-import androidx.compose.runtime.Composable
 import kmmportfolioapp.composeapp.resources.*
 import org.jetbrains.compose.resources.*
 

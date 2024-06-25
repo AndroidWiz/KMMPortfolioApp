@@ -1,9 +1,8 @@
 package ui.navigation
 
-import androidx.compose.runtime.Composable
-import moe.tlaster.precompose.navigation.NavHost
-import moe.tlaster.precompose.navigation.rememberNavigator
-import ui.screens.HomeScreen
+import androidx.compose.runtime.*
+import moe.tlaster.precompose.navigation.*
+import ui.screens.*
 
 @Composable
 fun AppNavigation() {

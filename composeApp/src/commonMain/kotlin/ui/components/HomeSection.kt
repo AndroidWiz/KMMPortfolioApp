@@ -16,9 +16,11 @@ import org.jetbrains.compose.resources.*
 import ui.theme.*
 
 @Composable
-fun HomeSection() {
+fun HomeSection(
+    modifier: Modifier
+) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -43,12 +45,12 @@ fun HomeSection() {
             fontFamily = PoppinsFamily()
         )
 
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = modifier.height(50.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(20.dp)) {
             OutlinedButton(
                 shape = RoundedCornerShape(10.dp),
                 border = BorderStroke(width = 2.dp, color = FirstColor),
-                modifier = Modifier
+                modifier = modifier
                     .wrapContentWidth()
                     .height(50.dp),
                 colors = ButtonDefaults.outlinedButtonColors(
@@ -68,7 +70,7 @@ fun HomeSection() {
             }
             Button(
                 shape = RoundedCornerShape(10.dp),
-                modifier = Modifier
+                modifier = modifier
                     .wrapContentWidth()
                     .height(50.dp),
                 colors = ButtonDefaults.outlinedButtonColors(
@@ -87,11 +89,11 @@ fun HomeSection() {
             }
         }
 
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = modifier.height(50.dp))
         Image(
             painter = painterResource(Res.drawable.image),
             "image",
-            modifier = Modifier.width(300.dp)
+            modifier = modifier.width(300.dp)
                 .height(400.dp)
                 .clip(RoundedCornerShape(10.dp)),
             contentScale = ContentScale.Crop,

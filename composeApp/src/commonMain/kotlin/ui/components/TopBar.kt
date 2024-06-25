@@ -6,25 +6,23 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.*
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.unit.*
-import kmmportfolioapp.composeapp.resources.Res
-import kmmportfolioapp.composeapp.resources.logo_capsule
+import kmmportfolioapp.composeapp.resources.*
 import org.jetbrains.compose.resources.painterResource
-import ui.theme.FirstColor
+import ui.theme.*
 
 @Composable
-fun TopBar() {
+fun TopBar(modifier: Modifier) {
     Row(
-        modifier = Modifier.fillMaxWidth().height(100.dp),
+        modifier = modifier.fillMaxWidth().height(100.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Image(
             painter = painterResource(Res.drawable.logo_capsule),
             contentDescription = "logo",
-            modifier = Modifier.fillMaxSize(),
+            modifier = modifier.fillMaxSize(),
             alignment = Alignment.CenterStart,
             colorFilter = ColorFilter.tint(FirstColor)
-//            colorFilter = ColorFilter.tint(Color.White)
         )
     }
 
