@@ -1,0 +1,18 @@
+<resources>
+    <string name="hello">Hello, I'm</string>
+    <string name="name">Sharjeel Karim</string>
+    <string name="position">Software Developer</string>
+    <string name="download_cv">Download CV</string>
+    <string name="contact_me">Contact Me</string>
+    <string name="about_me">About Me</string>
+    <string name="about_me_description">I, Sharjeel Karim, am an aspiring Computer Science enthusiast with a soft side for Full-Stack Web Development as well as Android Development.\nFrom Bangladesh, based in Dhaka.</string>
+    <string name="my_intro">My Intro</string>
+    <string name="experience">Experience</string>
+    <string name="experience_subtitle">3 Years Working</string>
+    <string name="completed">Completed</string>
+    <string name="completed_subtitle">30+ Projects</string>
+    <string name="my_abilities">My Abilities</string>
+    <string name="my_skills">My Skills</string>
+    <string name="frontend_developer">Frontend Developer</string>
+    <string name="backend_developer">Backend Developer</string>
+</resources>

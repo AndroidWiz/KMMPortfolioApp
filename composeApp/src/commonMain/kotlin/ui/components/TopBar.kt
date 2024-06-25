@@ -9,6 +9,7 @@ import androidx.compose.ui.unit.*
 import kmmportfolioapp.composeapp.resources.Res
 import kmmportfolioapp.composeapp.resources.logo_capsule
 import org.jetbrains.compose.resources.painterResource
+import ui.theme.FirstColor
 
 @Composable
 fun TopBar() {
@@ -21,7 +22,8 @@ fun TopBar() {
             painter = painterResource(Res.drawable.logo_capsule),
             contentDescription = "logo",
             modifier = Modifier.fillMaxSize(),
-            colorFilter = ColorFilter.tint()
+            alignment = Alignment.CenterStart,
+            colorFilter = ColorFilter.tint(FirstColor)
 //            colorFilter = ColorFilter.tint(Color.White)
         )
     }
