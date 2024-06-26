@@ -46,6 +46,11 @@ fun HomeScreen(
                 HomeSection(modifier = modifier)
                 Spacer(modifier = modifier.height(100.dp))
                 AboutMe(responsive = responsive, modifier = modifier)
+                Spacer(modifier = modifier.height(100.dp))
+                MySkills(responsive = responsive, modifier = modifier)
+                Spacer(modifier = modifier.height(100.dp))
+                RecentWorks(responsive = responsive, modifier = modifier)
+//                ContactMe(responsive = responsive, modifier = modifier)
 
             }
         }

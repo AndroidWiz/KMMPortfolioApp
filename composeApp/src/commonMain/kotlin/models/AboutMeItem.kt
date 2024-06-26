@@ -10,7 +10,7 @@ data class AboutMeItem(
 )
 
 
-fun getAboutMeCards(): List<AboutMeItem> {
+fun getAboutMeItems(): List<AboutMeItem> {
     return mutableListOf(
         AboutMeItem(
             image = Res.drawable.about_me,

@@ -15,4 +15,9 @@
     <string name="my_skills">My Skills</string>
     <string name="frontend_developer">Frontend Developer</string>
     <string name="backend_developer">Backend Developer</string>
+    <string name="my_portfolio">My Portfolio</string>
+    <string name="recent_works">Recent Works</string>
+    <string name="all">All</string>
+    <string name="web">Web</string>
+    <string name="mobile">Mobile</string>
 </resources>

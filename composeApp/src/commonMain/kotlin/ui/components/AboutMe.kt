@@ -41,10 +41,7 @@ fun AboutMe(responsive: Responsive, modifier: Modifier) {
     // About Me Details
     FlowRow(
         modifier = modifier.fillMaxWidth().padding(horizontal = 20.dp),
-        horizontalArrangement = Arrangement.spacedBy(
-            30.dp,
-            alignment = Alignment.CenterHorizontally
-        ),
+        horizontalArrangement = Arrangement.spacedBy(30.dp, alignment = Alignment.CenterHorizontally),
         verticalArrangement = Arrangement.spacedBy(20.dp, alignment = Alignment.CenterVertically),
         maxItemsInEachRow = if (responsive.isDesktop) 2 else 1
     ) {
@@ -110,15 +107,12 @@ fun AboutMe(responsive: Responsive, modifier: Modifier) {
 
 @Composable
 fun AboutMeCard(responsive: Responsive, modifier: Modifier) {
-    val aboutMeItems = remember { getAboutMeCards() }
+    val aboutMeItems = remember { getAboutMeItems() }
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         modifier = modifier.height(110.dp),
-        horizontalArrangement = Arrangement.spacedBy(
-            10.dp,
-            alignment = Alignment.CenterHorizontally
-        ),
+        horizontalArrangement = Arrangement.spacedBy(10.dp, alignment = Alignment.CenterHorizontally),
         verticalArrangement = Arrangement.spacedBy(10.dp),
         content = {
             items(aboutMeItems) { aboutMeItem ->
