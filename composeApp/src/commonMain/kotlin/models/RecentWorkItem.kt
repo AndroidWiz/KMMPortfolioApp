@@ -5,7 +5,8 @@ import org.jetbrains.compose.resources.*
 
 enum class ProjectType {
     Web,
-    Mobile
+    Mobile,
+    All
 }
 
 data class RecentWorkItem(

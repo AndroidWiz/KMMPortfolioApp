@@ -18,23 +18,15 @@ import ui.theme.*
 
 @Composable
 fun MySkills(responsive: Responsive, modifier: Modifier) {
-    Text(
-        text = stringResource(Res.string.my_abilities),
-        color = TextColor,
-        fontSize = 12.sp,
-        fontFamily = PoppinsFamily(),
-        fontWeight = FontWeight.Medium
-    )
-    Text(
-        text = stringResource(Res.string.my_skills),
-        color = FirstColor,
-        fontSize = 24.sp,
-        fontFamily = PoppinsFamily(),
-        fontWeight = FontWeight.SemiBold
-    )
-    Spacer(modifier = modifier.height(30.dp))
 
-    MySkillCard(modifier = modifier, responsive = responsive)
+    Column(
+        modifier = modifier.fillMaxWidth().wrapContentHeight(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        SectionHeader(modifier = modifier, title = Res.string.my_abilities, subTitle = Res.string.my_skills)
+
+        MySkillCard(modifier = modifier, responsive = responsive)
+    }
 }
 
 @Composable
@@ -79,8 +71,6 @@ fun MySkillCardView(mySkillItem: MySkillItem, modifier: Modifier) {
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             contentPadding = PaddingValues(10.dp),
-//            horizontalArrangement = Arrangement.spacedBy(15.dp, alignment = Alignment.CenterHorizontally),
-//            verticalArrangement = Arrangement.spacedBy(15.dp, alignment = Alignment.CenterVertically),
             horizontalArrangement = Arrangement.spacedBy(15.dp, alignment = Alignment.CenterHorizontally),
             verticalArrangement = Arrangement.spacedBy(10.dp, alignment = Alignment.CenterVertically),
             content = {

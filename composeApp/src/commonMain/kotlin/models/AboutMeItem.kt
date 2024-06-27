@@ -13,12 +13,12 @@ data class AboutMeItem(
 fun getAboutMeItems(): List<AboutMeItem> {
     return mutableListOf(
         AboutMeItem(
-            image = Res.drawable.about_me,
+            image = Res.drawable.ic_about_me,
             title = Res.string.experience,
             subtitle = Res.string.experience_subtitle
         ),
         AboutMeItem(
-            image = Res.drawable.briefcase,
+            image = Res.drawable.ic_briefcase,
             title = Res.string.completed,
             subtitle = Res.string.completed_subtitle
         )

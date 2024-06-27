@@ -21,87 +21,77 @@ import ui.theme.*
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun AboutMe(responsive: Responsive, modifier: Modifier) {
-    Text(
-        text = stringResource(Res.string.my_intro),
-        color = TextColor,
-        fontSize = 12.sp,
-        fontFamily = PoppinsFamily(),
-        fontWeight = FontWeight.Medium
-    )
-    Text(
-        text = stringResource(Res.string.about_me),
-        color = FirstColor,
-        fontSize = 24.sp,
-        fontFamily = PoppinsFamily(),
-        fontWeight = FontWeight.SemiBold
-    )
 
-    Spacer(modifier = modifier.height(30.dp))
-
-    // About Me Details
-    FlowRow(
-        modifier = modifier.fillMaxWidth().padding(horizontal = 20.dp),
-        horizontalArrangement = Arrangement.spacedBy(30.dp, alignment = Alignment.CenterHorizontally),
-        verticalArrangement = Arrangement.spacedBy(20.dp, alignment = Alignment.CenterVertically),
-        maxItemsInEachRow = if (responsive.isDesktop) 2 else 1
+    Column(
+        modifier = modifier.fillMaxWidth().wrapContentHeight(),
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        // left part
-        // Image logo
-        Box(
-            modifier = modifier.fillMaxWidth(if (responsive.isDesktop) 0.25f else 1f),
-            contentAlignment = Alignment.Center,
-        ) {
-            Image(
-                painter = painterResource(Res.drawable.logo_capsule),
-                modifier = modifier.size(if (responsive.isMobile) 220.dp else 400.dp),
-                contentDescription = "logo",
-                colorFilter = ColorFilter.tint(FirstColor),
-            )
-        }
-        // right part
-        Column(
-            modifier = modifier.fillMaxWidth(if (responsive.isDesktop) 0.25f else 1f),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(20.dp)
-        ) {
-            // Experience and Projects Card Row
-            AboutMeCard(responsive = responsive, modifier = modifier)
+        SectionHeader(modifier = modifier, title = Res.string.my_intro, subTitle = Res.string.about_me)
 
-            // About Me Description
-            Text(
-                text = stringResource(Res.string.about_me_description),
-                color = TextColor,
-                textAlign = TextAlign.Justify,
-                fontFamily = PoppinsFamily(),
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Medium,
-                overflow = TextOverflow.Clip,
-                softWrap = true,
-            )
-            // Button Contact Me
-            Button(
-                shape = RoundedCornerShape(10.dp),
-                modifier = modifier
-                    .wrapContentWidth()
-                    .height(50.dp),
-                colors = ButtonDefaults.outlinedButtonColors(
-                    backgroundColor = FirstColor,
-                    contentColor = Color.Transparent
-                ),
-                onClick = {}
+        // About Me Details
+        FlowRow(
+            modifier = modifier.fillMaxWidth().padding(horizontal = 20.dp),
+            horizontalArrangement = Arrangement.spacedBy(30.dp, alignment = Alignment.CenterHorizontally),
+            verticalArrangement = Arrangement.spacedBy(20.dp, alignment = Alignment.CenterVertically),
+            maxItemsInEachRow = if (responsive.isDesktop) 2 else 1
+        ) {
+            // left part
+            // Image logo
+            Box(
+                modifier = modifier.fillMaxWidth(if (responsive.isDesktop) 0.25f else 1f),
+                contentAlignment = Alignment.Center,
             ) {
-                Text(
-                    text = stringResource(Res.string.contact_me),
-                    fontSize = 16.sp,
-                    color = Body_Color,
-                    textAlign = TextAlign.Center,
-                    fontWeight = FontWeight.SemiBold,
-                    fontFamily = PoppinsFamily()
+                Image(
+                    painter = painterResource(Res.drawable.logo_capsule),
+                    modifier = modifier.size(if (responsive.isMobile) 220.dp else 400.dp),
+                    contentDescription = "logo",
+                    colorFilter = ColorFilter.tint(FirstColor),
                 )
+            }
+            // right part
+            Column(
+                modifier = modifier.fillMaxWidth(if (responsive.isDesktop) 0.25f else 1f),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(20.dp)
+            ) {
+                // Experience and Projects Card Row
+                AboutMeCard(responsive = responsive, modifier = modifier)
+
+                // About Me Description
+                Text(
+                    text = stringResource(Res.string.about_me_description),
+                    color = TextColor,
+                    textAlign = TextAlign.Justify,
+                    fontFamily = PoppinsFamily(),
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Medium,
+                    overflow = TextOverflow.Clip,
+                    softWrap = true,
+                )
+                // Button Contact Me
+                Button(
+                    shape = RoundedCornerShape(10.dp),
+                    modifier = modifier
+                        .wrapContentWidth()
+                        .height(50.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        backgroundColor = FirstColor,
+                        contentColor = Color.Transparent
+                    ),
+                    onClick = {}
+                ) {
+                    Text(
+                        text = stringResource(Res.string.contact_me),
+                        fontSize = 16.sp,
+                        color = Body_Color,
+                        textAlign = TextAlign.Center,
+                        fontWeight = FontWeight.SemiBold,
+                        fontFamily = PoppinsFamily()
+                    )
+                }
             }
         }
     }
-
 }
 
 

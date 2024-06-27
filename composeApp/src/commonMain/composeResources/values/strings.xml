@@ -20,4 +20,8 @@
     <string name="all">All</string>
     <string name="web">Web</string>
     <string name="mobile">Mobile</string>
+    <string name="get_in_touch">Get In Touch</string>
+    <string name="talk_to_me">Talk to me</string>
+    <string name="write_to_me">Write to me</string>
+    <string name="copyright">&#169; Kudu. All rights reserved</string>
 </resources>

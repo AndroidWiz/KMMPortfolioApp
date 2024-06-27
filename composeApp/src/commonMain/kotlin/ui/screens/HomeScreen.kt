@@ -42,15 +42,19 @@ fun HomeScreen(
                 modifier = modifier.fillMaxSize()
                     .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(100.dp)
             ) {
                 HomeSection(modifier = modifier)
-                Spacer(modifier = modifier.height(100.dp))
+//                Spacer(modifier = modifier.height(100.dp))
                 AboutMe(responsive = responsive, modifier = modifier)
-                Spacer(modifier = modifier.height(100.dp))
+//                Spacer(modifier = modifier.height(100.dp))
                 MySkills(responsive = responsive, modifier = modifier)
-                Spacer(modifier = modifier.height(100.dp))
+//                Spacer(modifier = modifier.height(100.dp))
                 RecentWorks(responsive = responsive, modifier = modifier)
-//                ContactMe(responsive = responsive, modifier = modifier)
+//                Spacer(modifier = modifier.height(100.dp))
+                ContactMe(responsive = responsive, modifier = modifier)
+//                Spacer(modifier = modifier.height(100.dp))
+                Footer(modifier = modifier, responsive = responsive)
 
             }
         }
