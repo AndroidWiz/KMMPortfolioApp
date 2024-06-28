@@ -24,9 +24,11 @@ fun AboutMe(responsive: Responsive, modifier: Modifier) {
 
     Column(
         modifier = modifier.fillMaxWidth().wrapContentHeight(),
+        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         SectionHeader(modifier = modifier, title = Res.string.my_intro, subTitle = Res.string.about_me)
+        Spacer(modifier = modifier.height(35.dp))
 
         // About Me Details
         FlowRow(

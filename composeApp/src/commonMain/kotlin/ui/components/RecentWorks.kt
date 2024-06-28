@@ -2,17 +2,13 @@ package ui.components
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.*
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.*
 import androidx.compose.runtime.*
 import androidx.compose.material.*
 import androidx.compose.ui.*
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.*
-import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.text.font.*
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.*
@@ -71,10 +67,9 @@ fun RecentWorks(responsive: Responsive, modifier: Modifier) {
 fun RecentWorkCard(modifier: Modifier, responsive: Responsive, recentWorkItems: List<RecentWorkItem>) {
 
     LazyVerticalGrid(
-//        columns = GridCells.Adaptive(240.dp),
         columns = GridCells.Fixed(if(responsive.isMobile) 1 else 2),
         contentPadding = PaddingValues(20.dp),
-        modifier = modifier.heightIn( min = 2000.dp,max =3000.dp)
+        modifier = modifier.heightIn( min = 1500.dp,max =3000.dp)
             .fillMaxWidth(if (responsive.isDesktop) 0.45f else 1f),
         horizontalArrangement = Arrangement.spacedBy(40.dp, alignment = Alignment.CenterHorizontally),
         verticalArrangement = Arrangement.spacedBy(20.dp, alignment = Alignment.CenterVertically),

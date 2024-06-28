@@ -15,12 +15,12 @@ fun getMySkillItems(): List<MySkillItem> {
             title = Res.string.frontend_developer,
             image = Res.drawable.ic_verified,
             skillList = listOf(
-                "Jetpack Compose",
                 "XML",
                 "HTML",
                 "CSS",
                 "Bootstrap",
-                "TypeScript"
+                "TypeScript",
+                "Jetpack Compose"
             )
         ),
         MySkillItem(

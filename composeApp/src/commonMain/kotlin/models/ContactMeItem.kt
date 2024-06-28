@@ -14,12 +14,12 @@ fun getContactMeItems(): List<ContactMeItem> {
         ContactMeItem(
             icon = Res.drawable.ic_email,
             title = "Email",
-            subtitle = "poko.sk.tolu@gmail.com"
+            subtitle = "email@email.com"
         ),
         ContactMeItem(
             icon = Res.drawable.ic_whatsapp,
             title = "Whatsapp",
-            subtitle = "+60-16-799-459"
+            subtitle = "+880-000-000-0000"
         ),
         ContactMeItem(
             icon = Res.drawable.ic_messenger,

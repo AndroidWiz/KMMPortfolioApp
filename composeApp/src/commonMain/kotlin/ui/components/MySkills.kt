@@ -21,6 +21,7 @@ fun MySkills(responsive: Responsive, modifier: Modifier) {
 
     Column(
         modifier = modifier.fillMaxWidth().wrapContentHeight(),
+        verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         SectionHeader(modifier = modifier, title = Res.string.my_abilities, subTitle = Res.string.my_skills)
@@ -36,7 +37,7 @@ fun MySkillCard(modifier: Modifier, responsive: Responsive) {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(260.dp),
         contentPadding = PaddingValues(20.dp),
-        modifier = modifier.height(if (responsive.isMobile) 640.dp else 400.dp)
+        modifier = modifier.height(if (responsive.isMobile) 540.dp else 300.dp)
             .fillMaxWidth(if (responsive.isDesktop) 0.48f else 1f),
         horizontalArrangement = Arrangement.spacedBy(30.dp, alignment = Alignment.CenterHorizontally),
         verticalArrangement = Arrangement.spacedBy(20.dp, alignment = Alignment.CenterVertically),

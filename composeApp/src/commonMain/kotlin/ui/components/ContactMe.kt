@@ -50,7 +50,7 @@ fun ContactMeCard(modifier: Modifier, responsive: Responsive) {
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(1),
-        modifier = modifier.height(600.dp)
+        modifier = modifier.height(540.dp)
             .fillMaxWidth(if (responsive.isDesktop) 0.2f else 0.9f),
         horizontalArrangement = Arrangement.spacedBy(30.dp, alignment = Alignment.CenterHorizontally),
         verticalArrangement = Arrangement.spacedBy(20.dp, alignment = Alignment.CenterVertically),
