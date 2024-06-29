@@ -1,7 +1,11 @@
-# Compose Multiplatform Portfolio Application
+# Compose Multiplatform Portfolio App
 This is a Portfolio App targeting Android, iOS, Web and Desktop.
 
 ## Live demo - [KMM-Portfolio-App](https://skudu95.github.io/KMM-Portfolio-App/)
+
+### :camera: Screenshots
+![KMM Portfolio App](https://github.com/skudu95/KMMPortfolioApp/assets/44142391/4a5d56b6-4c43-44f0-9fa6-ddb318c1dac4)
+
 
 ### 📹 Video recordings
 Android
